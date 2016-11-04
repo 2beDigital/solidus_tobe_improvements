@@ -1,0 +1,29 @@
+# Sample localization file for Portuguese. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+pt:
+  export_to_csv: "Exportar para CSV"
+  back_to_general_settings: "Voltar para configuração"
+  gtm: 'Etiquetas Gestor google'
+  checkout_allowed_errors:
+    minimum_order_value: 'Compra mínima de '
+  spree:
+    back_to_pages_list: Voltar para a lista de páginas
+    page_edit: Editar página
+    backorder_charge: Frete grátis para encomendas de ações em circulação
+    check_categories: Somente encargos primeira entrega
+    show_sku: Referência de produto mostram
+    minimum_order_value: 'Compra mínima de '
+    updated_at: Modificada
+    created_at: Criado
+    select_a_return_authorization_reason: Select a reason for the return authorization
+    select_a_stock_location: Select a stock location
+    shipment_states:
+      canceled: canceled
+    my_new_address: Meu novo endereço
+  free_delivery: Frete grátis para esses produtos.
+  info_free_shipping_for_backorder: 'Não temos produto suficiente em estoque e será enviado quando houver disponibilidade. Obrigado e desculpe.'
+  learn_more: "Mais informação"
+  cookies_services_info: "Os cookies nos ajudam a oferecer nossos serviços. Ao utilizar nossos serviços, você concorda com a nossa utilização de cookies."
+  retail: "Retail"
+  

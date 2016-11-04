@@ -5,6 +5,7 @@ module SolidusTobeImprovements
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_javascripts
+         append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_tobe_improvements\n"
       end
 
       def add_stylesheets

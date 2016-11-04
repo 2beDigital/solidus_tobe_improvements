@@ -1,0 +1,33 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  export_to_csv: "Export to CSV"
+  back_to_general_settings: "Back to general settings"
+  gtm: 'Google Tag Manager'
+  checkout_allowed_errors:
+    minimum_order_value: 'Minimum Purchase of '
+  spree:
+    back_to_pages_list: Back To Pages List
+    page_edit: Edit Page
+    backorder_charge: Free shipping on orders pending stock
+    check_categories: Only first delivery charges
+    minimum_order_value: 'Minimum Purchase of '
+    show_sku: Show product reference
+    orders_and_shipments_settings: Orders and shipments settings
+    invoices_settings: Invoices settings
+    updated_at: Modified
+    created_at: Created
+    show_taxes: 'Show taxes (Ej: IVA)'
+    accept_terms_and_conditions: I accept the Terms and Conditions
+    must_accept_terms_and_conditions: You must accept the Terms and Conditions
+    require_terms_and_conditions: Require terms and conditions.
+    my_new_address: My new address
+  free_delivery: Free delivery for this items.
+  info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
+  learn_more: "[+] Info"
+  cookies_services_info: "Cookies help us deliver our services. By using our services, you agree to our use of cookies."
+  order_delete: "The order has been deleted."
+  order_not_delete: "The order can not be eliminated."
+  retail: "Retail"
+  

@@ -1,7 +1,7 @@
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
                      :name => 'remove_h5',
                      :sequence => 1,
-                     :remove => 'h5.stock-shipping-method-title')
+                     :remove => 'h4.stock-shipping-method-title')
 
 Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
                      :name => 'remove_shipping_rates',
