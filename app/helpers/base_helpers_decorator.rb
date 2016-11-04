@@ -9,3 +9,8 @@ end
 def show_taxes
   return Spree::Config[:show_taxes]
 end
+
+def cookies_accepted?
+  return false unless request.cookies['accept.cookies'].present?
+  true
+end
