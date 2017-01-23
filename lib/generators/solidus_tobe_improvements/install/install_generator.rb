@@ -11,6 +11,10 @@ module SolidusTobeImprovements
       def add_stylesheets
       end
 
+      def add_images
+         append_file 'config/initializers/assets.rb', "\nRails.application.config.assets.precompile += %w( flags/* )\n"
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=solidus_tobe_improvements'
       end

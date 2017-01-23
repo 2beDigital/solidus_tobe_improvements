@@ -14,3 +14,7 @@ def cookies_accepted?
   return false unless request.cookies['accept.cookies'].present?
   true
 end
+
+def flag_image_url(locale)
+	asset_url "flags/" + locale.to_s + '.png'
+end
