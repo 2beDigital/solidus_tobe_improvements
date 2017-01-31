@@ -1,0 +1,44 @@
+.cookies-bar{
+  background-color: white;
+  border-color: #333;
+  border-top: 1px solid #333;
+  bottom: 0 !important;
+  box-shadow: 0px 0px 10px 0px;
+  color: #000;
+  height: auto;
+  left:0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 9000;
+  .btn-toolbar{
+    display: inline-block;
+    float: none;
+    margin-right: 20px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    .btn{
+      background-color: #555;
+      color: white;
+      float:none;
+      padding: 0px 10px;
+      &:hover{
+        color: #999;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .cookies-bar {
+    font-size: 12px;
+    .btn-toolbar {
+      .btn{
+        font-size:10px;
+      }
+    }
+  }
+}

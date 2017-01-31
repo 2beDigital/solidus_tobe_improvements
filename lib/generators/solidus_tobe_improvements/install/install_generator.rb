@@ -9,6 +9,7 @@ module SolidusTobeImprovements
       end
 
       def add_stylesheets
+        append_file 'vendor/assets/stylesheets/spree/frontend/all.css', "*= require spree/frontend/solidus_tobe_improvements\n"
       end
 
       def add_images
