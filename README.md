@@ -9,20 +9,17 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'solidus_tobe_improvements'
+gem 'solidus_tobe_improvements', :git => 'https://github.com/2beDigital/solidus_tobe_improvements.git', :branch => 'master'
+
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+After install it yourself as:
 
-    $ gem install solidus_tobe_improvements
-
-## Usage
-
-TODO: Write usage instructions here
+    $ rails g solidus_tobe_improvements:install 
 
 ## Development
 
