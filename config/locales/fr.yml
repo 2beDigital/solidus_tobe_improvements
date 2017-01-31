@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 fr:
+  admin:
+      tab:
+        Pages: Pages
   export_to_csv: "Exporter au format CSV"
   back_to_general_settings: "Retour à la configuration"
   gtm: 'Étiquettes de Google Optimiseur'

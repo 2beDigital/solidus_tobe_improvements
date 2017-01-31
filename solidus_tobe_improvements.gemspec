@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_tobe_improvements'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.summary     = '2BeDigital Improvements'
   s.description = '2BeDigital Improvements'
   s.required_ruby_version = '>= 2.2.0'
@@ -14,6 +14,9 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'solidus_core', '>= 2.0'
+  s.add_dependency 'solidus_trackers'
+  s.add_dependency 'httparty', '>= 0.13.7'
+
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'

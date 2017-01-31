@@ -1,0 +1,44 @@
+<div class="container">
+  <div data-hook="admin_tracker_form_fields" class="row">
+      <div class="col-md-3">
+        <div id="analytics" data-hook="analytics_id" class="field">
+          <%= label_tag :tracker_analytics_id, Spree.t(:google_analytics_id) %>
+          <%= text_field :tracker, :analytics_id, :class => 'fullwidth' %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div id="tag_manager" data-hook="google_tag_manager_id" class="field">
+          <%= label_tag :tracker_google_tag_manager_id, t(:gtm) %>
+          <%= text_field :tracker, :gtm_id, :class => 'fullwidth' %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div id="facebook_pixel" data-hook="facebook_pixel_id" class="field">
+          <%= label_tag :tracker_facebook_id, t(:facebook_pixel) %>
+          <%= text_field :tracker, :facebook_pixel_id, :class => 'fullwidth' %>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div data-hook="active" class="field">
+          <%= label_tag nil, Spree.t(:active) %>
+          <ul>
+            <li>
+              <%= radio_button(:tracker, :active, true) %>
+              <%= label_tag :tracker_active_true, Spree.t(:say_yes) %>
+            </li>
+            <li>
+              <%= radio_button(:tracker, :active, false) %>
+              <%= label_tag :tracker_active_false, Spree.t(:say_no) %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+      <div data-hook="store_select" class="field">
+        <%= f.label :store %>
+        <div class="clear"></div>
+        <%= collection_select(:tracker, :store_id, Spree::Store.all, :id, :name, {}, {:class => 'select2 fullwidth'}) %>
+      </div>
+    </div>
+  </div>
+</div>

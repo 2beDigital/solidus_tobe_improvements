@@ -7,3 +7,14 @@
 /pkg/
 /spec/reports/
 /tmp/
+\#*
+*~
+.#*
+.DS_Store
+.idea
+.project
+.sass-cache
+nbproject
+*.swp
+spec/dummy
+

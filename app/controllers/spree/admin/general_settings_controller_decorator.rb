@@ -1,7 +1,8 @@
 Spree::Admin::GeneralSettingsController.class_eval do
-  	alias_method :edit_original, :edit unless method_defined? :edit_original
-  	alias_method :update_original, :update unless method_defined? :update_original
-	def edit
+  alias_method :edit_original, :edit unless method_defined? :edit_original
+  alias_method :update_original, :update unless method_defined? :update_original
+	
+  def edit
 		edit_original
 		@preferences_order_and_shipments = [ :minimum_order_value, :require_terms_and_conditions, :backorder_charge, :check_categories, :show_sku, :show_taxes]
 	end

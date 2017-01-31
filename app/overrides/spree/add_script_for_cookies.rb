@@ -9,8 +9,3 @@ Deface::Override.new(:virtual_path => 'spree/layouts/spree_application',
                      :text => '<% unless cookies_accepted? %>
 						            <%= render :partial => "spree/shared/cookies_policy" %>
 						       <% end %>')
-
-
-
-
-

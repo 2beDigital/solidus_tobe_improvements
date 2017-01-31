@@ -5,9 +5,22 @@ es:
   export_to_csv: "Exportar a CSV"
   back_to_general_settings: "Volver a configuración"
   gtm: 'Administrador etiquetas google'
+  facebook_pixel: 'Facebook pixel'
+  tracker_identifier: Tracker id
   checkout_allowed_errors:
     minimum_order_value: 'Compra mínima de '
   spree:
+    admin_login: Acceso administrador
+    admin:
+      tab:
+        Pages: Páginas
+      users:
+        user_page_actions:
+          create_order: Realizar pedido
+    globalize:
+      locales_displayed_on_translation_forms: Idiomas soportados para añadir traducción en formularios (admin).
+    i18n:
+      locales_displayed_on_frontend_select_box: Idiomas disponibles para seleccionar en la tienda.
     back_to_pages_list: Volver a la lista de páginas
     page_edit: Editar página
     backorder_charge: Envio sin cargo para pedidos pendientes de stock
@@ -15,6 +28,9 @@ es:
     show_sku: Mostrar referencia del producto
     orders_and_shipments_settings: Configuración de pedidos y envios
     invoices_settings: Configuracion de factura
+    invoice_font_face: Tipo de fuente para la factura
+    next_invoice_number: Numero de factura siguiente
+    invoice_logo_scale: Escala aplicada al logo en la factura
     minimum_order_value: 'Compra mínima de '
     updated_at: Modificado
     created_at: Creado

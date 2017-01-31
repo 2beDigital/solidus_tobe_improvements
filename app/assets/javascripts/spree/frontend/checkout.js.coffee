@@ -10,7 +10,7 @@ Spree.disableSaveOnClick = ->
 Spree.toggleSaveOnClick = ->
     ($ 'form.edit_order :submit').prop('disabled', (i, v) ->
       !v
-	)
+    )
 
 Spree.ready ($) ->
 	Spree.Checkout = {}

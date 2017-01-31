@@ -1,24 +1,27 @@
 # SolidusTobeImprovements
-
+=====================
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/solidus_tobe_improvements`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this lines to your application's Gemfile:
 
 ```ruby
+gem 'solidus_trackers', :git => 'https://github.com/solidusio-contrib/solidus_trackers.git', branch: 'master'
 gem 'solidus_tobe_improvements', :git => 'https://github.com/2beDigital/solidus_tobe_improvements.git', :branch => 'master'
+
 
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 After install it yourself as:
 
+	$ rails g solidus_trackers:install 
     $ rails g solidus_tobe_improvements:install 
 
 ## Development
@@ -30,4 +33,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/solidus_tobe_improvements.
-
