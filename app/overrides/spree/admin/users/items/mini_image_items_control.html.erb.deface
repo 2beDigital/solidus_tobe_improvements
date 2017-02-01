@@ -1,2 +1,2 @@
-<!-- replace 'erb:contains("mini_image(item.variant)")' -->
-<%= mini_image(item.variant) if item.variant %>
+<!-- replace 'erb:contains("image_tag item.variant.display_image.attachment(:mini)")' -->
+<%= image_tag item.variant.display_image.attachment(:mini) if item.variant  %>

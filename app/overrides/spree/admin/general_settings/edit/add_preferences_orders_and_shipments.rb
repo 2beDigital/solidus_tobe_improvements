@@ -1,6 +1,6 @@
 Deface::Override.new(virtual_path: 'spree/admin/general_settings/edit',
 					 name: 'add_preferences_orders_and_shipments',
-					 insert_top: "div#preferences div.row div.alpha.six.columns",
+					 insert_before: ".filter-actions.form-buttons",
 				     text: '<fieldset class="no-border-bottom">
 						    	<legend align="center"><%= Spree.t(:orders_and_shipments_settings)%></legend>
 						    	<% @preferences_order_and_shipments.each do |key|

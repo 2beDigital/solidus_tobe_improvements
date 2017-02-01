@@ -10,10 +10,7 @@ module SolidusTobeImprovements
 
       def add_stylesheets
         inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css' , "*= require spree/frontend/solidus_tobe_improvements\n", before: /\*\//, verbose: true
-      end
-
-      def add_images
-         append_file 'config/initializers/assets.rb', "\nRails.application.config.assets.precompile += %w( flags/* )\n"
+        inject_into_file 'vendor/assets/stylesheets/spree/backend/all.css' , "*= require spree/backend/solidus_tobe_improvements\n", before: /\*\//, verbose: true
       end
 
       def add_migrations
