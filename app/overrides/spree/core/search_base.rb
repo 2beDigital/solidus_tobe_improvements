@@ -26,7 +26,7 @@ Spree::Core::Search::Base.class_eval do
   end
 
   def new_base_scope
-    base_scope = Spree::Product.active
+    base_scope = Spree::Product.display_includes.available
     base_scope = base_scope.in_taxon_no_order(taxon) unless taxon.blank?
     base_scope = get_products_conditions_for(base_scope, keywords)
     base_scope = add_search_scopes(base_scope)
