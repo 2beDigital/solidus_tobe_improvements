@@ -21,6 +21,10 @@ module SolidusTobeImprovements
         inject_into_file 'app/helpers/application_helper.rb', "require 'product_duplicator'\n", :before => "module ApplicationHelper\n"
       end
 
+      def add_helper
+        inject_into_file 'app/helpers/application_helper.rb', "include Spree::ImprovementsHelper'\n", :after => "module ApplicationHelper\n"
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=solidus_tobe_improvements'
       end
