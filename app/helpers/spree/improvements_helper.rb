@@ -1,4 +1,4 @@
-module Spree::ImprovementsHelper do
+module Spree::ImprovementsHelper
 	def backorder_charge
 	  return Spree::Config[:backorder_charge]
 	end

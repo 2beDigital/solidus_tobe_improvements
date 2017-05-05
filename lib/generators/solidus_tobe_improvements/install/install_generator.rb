@@ -22,7 +22,7 @@ module SolidusTobeImprovements
       end
 
       def add_helper
-        inject_into_file 'app/helpers/application_helper.rb', "include Spree::ImprovementsHelper'\n", :after => "module ApplicationHelper\n"
+        inject_into_file 'app/helpers/application_helper.rb', "include Spree::ImprovementsHelper\n", :after => "module ApplicationHelper\n"
       end
 
       def add_migrations
