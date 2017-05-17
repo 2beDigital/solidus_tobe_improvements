@@ -4,7 +4,7 @@ Spree::Admin::GeneralSettingsController.class_eval do
 	
   def edit
 		edit_original
-		@preferences_order_and_shipments = [ :minimum_order_value, :require_terms_and_conditions, :backorder_charge, :check_categories, :show_sku, :show_taxes]
+		@preferences_order_and_shipments = [ :minimum_order_value, :backorder_charge, :check_categories, :show_sku, :show_taxes]
 	end
 
    def update
