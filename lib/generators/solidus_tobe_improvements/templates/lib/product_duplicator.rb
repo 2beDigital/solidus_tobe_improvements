@@ -27,6 +27,7 @@ module Spree
     def duplicate_product
       product.dup.tap do |new_product|
         new_product.name = "COPY_OF_#{Time.now}_#{product.name}"
+        new_product.slug = "COPY_OF_#{Time.now}_#{product.slug}"
         new_product.taxons = product.taxons
         new_product.created_at = nil
         new_product.deleted_at = nil
@@ -44,7 +45,6 @@ module Spree
         new_master.deleted_at = nil
         new_master.images = master.images.map { |image| duplicate_image image } if @include_images
         new_master.price = master.price
-        new_master.currency = master.currency
       end
     end
 
