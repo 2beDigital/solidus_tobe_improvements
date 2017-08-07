@@ -1,7 +1,7 @@
 Spree::Admin::OrdersController.class_eval do
 
   def resend
-    OrderMailer.confirm_email(@order, true).deliver_later
+    Spree::OrderMailer.confirm_email(@order, true).deliver_later
     flash[:success] = Spree.t(:order_email_resent)
 
     redirect_to(spree.edit_admin_order_path(@order))
