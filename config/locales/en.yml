@@ -25,6 +25,12 @@ en:
     must_accept_terms_and_conditions: You must accept the Terms and Conditions
     require_terms_and_conditions: Require terms and conditions.
     my_new_address: My new address
+    mail_methods:
+      send_testmail: Send Test Mail
+      testmail:
+        delivery_error: Test Mail delivery error
+        delivery_success: Test Mail sent successfully
+        error: ! 'Test Mail error: %{e}'
   free_delivery: Free delivery for this items.
   info_free_shipping_for_backorder: We haven't enough product in stock and will be shipped once we have in stock. Thank you and sorry for the inconvenience.
   learn_more: "[+] Info"
