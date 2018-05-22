@@ -15,21 +15,4 @@ Spree::CheckoutController.class_eval do
       store_location
       redirect_to spree.signup_path
     end
-
-    def before_address
-        # if the user has a default address, a callback takes care of setting
-        # that; but if he doesn't, we need to build an empty one here
-        if spree_current_user && !spree_current_user.bill_address.blank?
-          @order.build_bill_address(spree_current_user.bill_address.value_attributes)
-          if spree_current_user.ship_address.blank? && @order.checkout_steps.include?('delivery')
-            @order.build_ship_address(spree_current_user.bill_address.value_attributes) 
-          elsif @order.checkout_steps.include?('delivery')
-            @order.build_ship_address(spree_current_user.ship_address.value_attributes)
-          end 
-        else          
-          default = { country_id: Country.default.id }
-          @order.build_bill_address(default) unless @order.bill_address
-          @order.build_ship_address(default) if @order.checkout_steps.include?('delivery') && !@order.ship_address
-        end
-    end
 end
