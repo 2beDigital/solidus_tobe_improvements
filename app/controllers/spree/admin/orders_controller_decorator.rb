@@ -10,6 +10,7 @@ Spree::Admin::OrdersController.class_eval do
   def destroy
     order = Spree::Order.find(params[:id])
     if !order.complete?
+      order.all_adjustments.delete_all
       order.delete
       flash[:success] = I18n.t(:order_delete)
       respond_with(order) do |format|
