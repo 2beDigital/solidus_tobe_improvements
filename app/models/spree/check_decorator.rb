@@ -1,4 +1,4 @@
-Spree::PaymentMethod::Check class_eval do
+Spree::PaymentMethod::Check.class_eval do
   def cancel(*)
     '0666'
   end
