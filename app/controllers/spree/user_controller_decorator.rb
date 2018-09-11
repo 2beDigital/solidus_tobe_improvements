@@ -16,7 +16,9 @@ Spree::UsersController.class_eval do
 	private
 
 	def spree_user_update_params
-		  Spree::PermittedAttributes.user_attributes.push( bill_address_attributes: [:firstname, 
+		  Spree::PermittedAttributes.user_attributes.push( :email, :password, :password_confirmation,
+		  													bill_address_attributes: [:id,
+		  																			 :firstname, 
 		  																			 :lastname, 
 		  																			 :company, 
 		  																			 :ident_fiscal, 
@@ -24,7 +26,7 @@ Spree::UsersController.class_eval do
 		  																			 :address2, 
 		  																			 :city, 
 		  																			 :country_id, 
-		  																			 :state_name, 
+		  																			 :state_id, 
 		  																			 :zipcode, 
 		  																			 :phone])
 		  params.require(:spree_user).permit(Spree::PermittedAttributes.user_attributes |
