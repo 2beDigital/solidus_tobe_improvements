@@ -1,7 +1,0 @@
-<!-- replace "erb[loud]:contains('link_to order.email, edit_admin_user_path(order.user)')" -->
-<!-- enabled -->
-<%= link_to order.email, edit_admin_user_path(order.user),
-                        data: {toogle: "tooltip" },
-                        title: "#{order.bill_address.firstname} #{order.bill_address.lastname} \n
-                        #{order.bill_address.company} #{order.bill_address.phone}", class: "tooltips" if order.bill_address.present? %>
-<span style="display:inline-block"><%= order.bill_address.firstname+' '+order.bill_address.lastname+'/'+order.bill_address.company+'('+order.bill_address.phone+')'if order.bill_address.present?%></span>
