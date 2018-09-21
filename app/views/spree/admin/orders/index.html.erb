@@ -145,7 +145,9 @@
     <tbody>
     <% @orders.each do |order| %>
       <% address = '' %>
-      <% order.bill_address.attributes.except('id', 'created_at','updated_at','state_id','country_id').each{ |key,value| address += value.present? ? value.to_s + ' ' : ''} %>
+      <% if order.bill_address.present? %>
+        <% order.bill_address.attributes.except('id', 'created_at','updated_at','state_id','country_id').each{ |key,value| address += value.present? ? value.to_s + ' ' : ''} %>
+      <% end %>
       <tr data-hook="admin_orders_index_rows" class="state-<%= order.state.downcase %> <%= cycle('odd', 'even') %>">
         <td class="align-center"><%= l (@show_only_completed ? order.completed_at : order.created_at).to_date %></td>
         <td class="align-center"><%= link_to order.number, edit_admin_order_path(order) %></td>
