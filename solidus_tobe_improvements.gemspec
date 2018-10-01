@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_tobe_improvements'
-  s.version     = '0.2.2'
+  s.version     = '0.2.3'
   s.summary     = '2BeDigital Improvements'
   s.description = '2BeDigital Improvements'
   s.required_ruby_version = '>= 2.2.0'

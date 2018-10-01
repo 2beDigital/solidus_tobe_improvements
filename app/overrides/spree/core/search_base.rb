@@ -1,11 +1,11 @@
 Spree::Core::Search::Base.class_eval do
-
-  alias_method :orig_get_base_scope,  :get_base_scope unless method_defined? :orig_get_base_scope
   alias_method :orig_prepare,  :prepare unless method_defined? :orig_prepare
+
+  protected
 
   def get_base_scope
     if @properties[:order].blank?
-      base_scope = orig_get_base_scope
+      base_scope = orig_get_base_scope_improved
     else
       base_scope = new_base_scope
     end
@@ -28,6 +28,18 @@ Spree::Core::Search::Base.class_eval do
   def new_base_scope
     base_scope = Spree::Product.display_includes.available
     base_scope = base_scope.in_taxon_no_order(taxon) unless taxon.blank?
+    base_scope = get_products_conditions_for(base_scope, keywords)
+    base_scope = add_search_scopes(base_scope)
+    base_scope = add_eagerload_scopes(base_scope)
+    base_scope
+  end
+
+  def orig_get_base_scope_improved
+    products = Spree::Product.display_includes.available
+    base_scope = products.in_taxon(taxon) unless taxon.blank?
+    if base_scope.blank?
+      base_scope = products.in_taxon_and_descendants(taxon) unless taxon.blank?
+    end
     base_scope = get_products_conditions_for(base_scope, keywords)
     base_scope = add_search_scopes(base_scope)
     base_scope = add_eagerload_scopes(base_scope)
