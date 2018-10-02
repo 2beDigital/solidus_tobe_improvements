@@ -37,9 +37,8 @@ Spree::Core::Search::Base.class_eval do
   def orig_get_base_scope_improved
     products = Spree::Product.display_includes.available
     base_scope = products.in_taxon(taxon) unless taxon.blank?
-    if base_scope.blank?
-      base_scope = products.in_taxon_and_descendants(taxon) unless taxon.blank?
-    end
+    base_scope = products.in_taxon_and_descendants(taxon) if taxon.present? && base_scope.blank?
+    base_scope = products if base_scope.blank?
     base_scope = get_products_conditions_for(base_scope, keywords)
     base_scope = add_search_scopes(base_scope)
     base_scope = add_eagerload_scopes(base_scope)
