@@ -10,6 +10,13 @@ es:
   checkout_allowed_errors:
     minimum_order_value: 'Compra mínima de '
   spree:
+    return_item_reception_status:
+      receive: Recibido
+      give: Entregado al cliente
+      lost: Perdido en transito
+      wrong_item_shipped: Articulo enviado erróneo
+      in_transit: En transito
+      short_shipped: No incluido en el envío
     admin_login: Acceso administrador
     admin:
       tab:
