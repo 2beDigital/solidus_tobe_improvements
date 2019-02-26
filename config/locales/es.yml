@@ -46,9 +46,6 @@ es:
     shipment_states:
       canceled: cancelado
     show_taxes: 'Mostrar impuestos (Ej: IVA)'
-    accept_terms_and_conditions: Acepto los terminos y las condiciones
-    must_accept_terms_and_conditions: Usted debe aceptar los terminos y las condiciones
-    require_terms_and_conditions_acceptance: Activar la aceptación de términos y condiciones.
     my_new_address: Mi nueva dirección
     extend_master_price: Aplicar precio a las variantes
     mail_methods:

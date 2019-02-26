@@ -21,9 +21,6 @@ en:
     updated_at: Modified
     created_at: Created
     show_taxes: 'Show taxes (Ej: IVA)'
-    accept_terms_and_conditions: I accept the Terms and Conditions
-    must_accept_terms_and_conditions: You must accept the Terms and Conditions
-    require_terms_and_conditions: Require terms and conditions.
     my_new_address: My new address
     mail_methods:
       send_testmail: Send Test Mail
